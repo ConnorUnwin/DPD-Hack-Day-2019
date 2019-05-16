@@ -1,5 +1,5 @@
-# Arnold Clark Hackday Challenge
 ![](./images/arnold-clark-logo.png)
+# Hackday Challenge
 
 # Trek Game
 ![](./images/Star-Trek.jpg)
@@ -29,7 +29,7 @@ Then to understand which player would win, winning combinations need to be creat
 - Rock Wins = [2] [0]
 
 ### Grouping Winning Combinations
-Refining and stucturing the winning combinations were grouped together by which values can wins e.g. what conbinations are required for scissors to win. Grouping combinations together also improved search efficiency as well as performance.
+Refining and stucturing the winning combinations were grouped together by which values can win e.g. what conbinations are required for scissors to win. Grouping winning combinations together could also improve search efficiency as well as performance.
 - Scissors Wins = [0] [1] OR [0] [3]
 - Paper Wins = [1] [2] OR [1] [4]
 - Rock Wins = [2] [3] OR [2] [0]
@@ -37,7 +37,7 @@ Refining and stucturing the winning combinations were grouped together by which 
 - Spock Wins = [4] [2] OR [4] [0]
 
 ### Constructing a 2d Array
-Using this to hold each of pair of winning combinations.
+Using this array to hold each of pair of winning combinations.
 ```javascript
 var winningCombinations = [[0,1], [0,3], [1,2], [1,4], [2,3], [2,0], [3,4], [3,1], [4,2], [4,0]];
 ```
