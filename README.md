@@ -5,20 +5,17 @@
 ![](./images/Star-Trek.jpg)
 
 ## Technologies Used
-To build the game logic, JavaScript was used, then using Bootstrap along with some custom CSS to create a web interface for users to play.
-
-- Bootstrap (v4)
-- AwesomeFonts (Icons)
+  To build the game logic JavaScript was used along Bootstrap and  some custom CSS to create a web interface.
+  - Bootstrap (v4)
+  - AwesomeFonts (For Icons)
 
 ## Game Design
-As the Trek game required the follow values; scissors, paper, rock, lizard spock, these were put in to an array as shown bellow.
+As the Trek game requires the follow values; scissors, paper, rock, lizard and spock. These were put in to an array as shown bellow.
 ```javascript
 var gameValues = [“scissors”, ”paper”, ”rock”, ”lizard”, “spock”];
 ```
-
-Then to understand which player would win, winning combinations need to be created. For simplicity, winning combinations were created  using the index number for each value within the gameValues array.
-
 ### Winning Combinations
+Then to understand which player would win, winning combinations need to be created. For simplicity, winning combinations were created using the index number for each value within the gameValues array.
 - Scissors Wins = [0] [1]
 - Paper Wins = [1] [2]
 - Rock Wins = [2] [3]
@@ -31,29 +28,26 @@ Then to understand which player would win, winning combinations need to be creat
 - Paper Wins = [2] [0]
 - Rock Wins = [2] [0]
 
-Refining and stucturing winning combinations were group together by which values can wins e.g. what conbinations are required for scissors to win. Grouping combinations together also improves search efficiency as well as performance.
-
 ### Grouping Winning Combinations
+Refining and stucturing the winning combinations were grouped together by which values can wins e.g. what conbinations are required for scissors to win. Grouping combinations together also improved search efficiency as well as performance.
 - Scissors Wins = [0] [1] OR [0] [3]
 - Paper Wins = [1] [2] OR [1] [4]
 - Rock Wins = [2] [3] OR [2] [0]
 - Lizard Wins= [3] [4] OR [3] [1]
 - Spock Wins = [4] [2] OR [4] [0]
 
-### Construction a 2d Array
-
+### Constructing a 2d Array
 Using this to hold each of pair of winning combinations.
 ```javascript
 var winningCombinations = [[0,1], [0,3], [1,2], [1,4], [2,3], [2,0], [3,4], [3,1], [4,2], [4,0]];
 ```
 
 ### Check Combinations
-The function bellow was used to test two conditions, wither both players had the same values and which player had the correct combination from the winningCombination array. To check which player had the same value the
+To determine which player has the winning value, each pair within the 2d array had to be evaluated from both sides (left to right) (right to left). So to understand which player had the winning value, the player 1 value needs to be compare player 2, then player value need to be compared to player 2. Only one combination will exist and this were the power of if statements can be used to find the winner as expressed bellow.
 
 ```javascript
 function checkAnswers(answer1, answer2){
   if (player1Input === player2Input){
-
     console.log("It's a Draw!");
   } else {
     for (var i = 0; i < winningCombinations.length; i++){
@@ -70,18 +64,19 @@ function checkAnswers(answer1, answer2){
               break;
             }
           }
-        }//end of inner for loop
-    }// end of outer for loop
+        }
+    }
   }
-}// end checkAnswers()
+}
 ```
-
 # Web Interface
-Additonal code was written to the checkAnswers function, to make the game interactive to users and
+Additonal code was written to the checkAnswers function, to make the game interactive. This can all be view within [main.js](https://github.com/ConnorUnwin/DPD-Hack-Day-2019/blob/master/js/main.js)
 ![](./images/Web-based-game-interface.png)
 
 # Winning
+The web-interface when the user wins.
 ![](./images/Winning.png)
 
 # Draw
+The web-interface when there is a draw.
 ![](./images/Draw.png)
