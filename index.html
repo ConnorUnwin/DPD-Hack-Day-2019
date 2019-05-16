@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/all.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Connor Unwin | Arnold Clark Hackday Challenge</title>
+  </head>
+  <body>
+    <div class="jumbotron">
+      <h1 class="text-center">Arnold Clark Hackday Challenge</h1>
+      <h2 class="text-center">Trek Game</h2>
+    </div>
+    <!-- Player 1 container-->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 bg-basic">
+          <h2 class="text-center">Player 1 (You)</h2>
+          <div class="row">
+            <button type="button" class="btn rock"  onclick="fetchPlayer1Answer('rock')"><i class="fas text-center fa-3x fa-hand-rock"></i><br>Rock</button>
+            <button type="button" class="btn paper" onclick="fetchPlayer1Answer('paper')"><i class="fas text-center fa-3x fa-hand-paper"></i><br>Paper</button>
+          </div>
+          <div class="row">
+            <button type="button" class="btn spock" id="spock" value="spock" onclick="fetchPlayer1Answer()"><i class="fas text-center fa-3x fa-hand-spock"></i><br>Spock</button>
+          </div>
+          <div class="row">
+            <button type="button" class="btn scissors" onclick="fetchPlayer1Answer('scissors')"><i class="fas text-center fa-3x fa-hand-scissors"></i><br>Scissors</button>
+            <button type="button" class="btn lizard" onclick="fetchPlayer1Answer('lizard')"><i class="fas text-center fa-3x fa-hand-lizard"></i><br>Lizard</button>
+          </div>
+
+        </div>
+          <!-- Player 2 container-->
+          <div class="col-md-6 bg-basic">
+            <h2 class="text-center">Player 2 (Computer)</h2>
+              <div class="row">
+                <button type="button" class="btn rock"><i class="fas text-center fa-3x fa-hand-rock"></i><br>Rock</button>
+                <button type="button" class="btn paper"><i class="fas text-center fa-3x fa-hand-paper"></i><br>Paper</button>
+              </div>
+              <div class="row">
+                <button type="button" class="btn spock"><i class="fas text-center fa-3x fa-hand-spock"></i><br>Spock</button>
+              </div>
+              <div class="row">
+                <button type="button" class="btn scissors"><i class="fas text-center fa-3x fa-hand-scissors"></i><br>Scissors</button>
+                <button type="button" class="btn lizard"><i class="fas text-center fa-3x fa-hand-lizard"></i><br>Lizard</button>
+              </div>
+          </div>
+          <!-- Player 1 Result Container-->
+          <div class="col-md-6 bg-basic">
+            <h2 class="text-center player1"></h2>
+            <h3 class="text-center player1-answer"></h3>
+          </div>
+          <!-- Player 2 Result Container-->
+          <div class="col-md-6 bg-basic">
+            <h2 class="text-center player2"></h2>
+            <h3 class="text-center player2-answer"></h3>
+          </div>
+      </div>
+    </div>
+      <script src="./js/main.js" charset="utf-8">
+      </script>
+      <script src="./js/bootstrap.min.js" charset="utf-8">
+      </script>
+  </body>
+</html>

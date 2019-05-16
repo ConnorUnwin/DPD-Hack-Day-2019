@@ -1,0 +1,71 @@
+.jumbotron{
+  background-color: #222B2A;
+  color: white;
+}
+
+.btn{
+  margin: 1px;
+  padding: 10px;
+  width: 49.5%;
+}
+
+.btn:active{
+  background-color: white;
+}
+.rock {
+  background-color: #939385;
+}
+
+.rock:active {
+  background-color: #C2C2BA;
+}
+
+.paper {
+  background-color: white;
+}
+
+/* Seperate hover colour because paper button is already white. */
+.paper:active{
+  background-color: #f2f2f2;
+}
+
+.scissors{
+  background-color: #e6e6e6;
+}
+
+
+.lizard {
+  background-color: #00ff55;
+}
+
+
+.spock{
+  background-color: #5DBCD2;
+  width: 100%;
+}
+
+.spock:active {
+  background-color: white;
+  width: 100%;
+}
+
+.player1, .player2 {
+  color: white;
+  width: 100%;
+  margin-top: 12px;
+}
+.winner {
+  background-color: green;
+}
+
+.loser{
+  background-color: red;
+}
+
+.player1-answer, .player2-answer{
+  text-transform: capitalize;
+}
+
+.draw {
+  background-color: blue;
+}
