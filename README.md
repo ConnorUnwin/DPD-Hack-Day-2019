@@ -71,7 +71,7 @@ function checkAnswers(answer1, answer2){
 ```
 # Web Interface
 Additonal code was written to the checkAnswers function, to make the game interactive. This can all be view within [main.js](https://github.com/ConnorUnwin/DPD-Hack-Day-2019/blob/master/js/main.js)
-![](./images/Web-based-game-interface.png)
+![](./images/Web-Based-Interface.png)
 
 # Winning
 The web-interface when the user wins.
@@ -80,3 +80,8 @@ The web-interface when the user wins.
 # Draw
 The web-interface when there is a draw.
 ![](./images/Draw.png)
+
+
+# Demo
+<a href="./video/Demo.mp4" target="_blank"><img src="images/Web-based-game-interface.png"
+alt="IMAGE ALT TEXT HERE" width="500" height="500" border="10" /></a>
