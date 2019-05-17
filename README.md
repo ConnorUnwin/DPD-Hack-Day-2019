@@ -29,7 +29,7 @@ To understand which player would win, winning combinations need to be created. F
 - Rock Wins = [2] [0]
 
 ### Grouping Winning Combinations
-Refining and stucturing the winning combinations were grouped together by which values can win e.g. what conbinations are required for scissors to win. Grouping winning combinations together could also improve search efficiency as well as performance.
+Refining and stucturing the winning combinations were grouped together by which values can win e.g. what combinations are required for scissors to win. Grouping winning combinations together could also improve search efficiency as well as performance.
 - Scissors Wins = [0] [1] OR [0] [3]
 - Paper Wins = [1] [2] OR [1] [4]
 - Rock Wins = [2] [3] OR [2] [0]
@@ -43,11 +43,11 @@ var winningCombinations = [[0,1], [0,3], [1,2], [1,4], [2,3], [2,0], [3,4], [3,1
 ```
 
 ### Check Combinations
-To determine which player has the winning value, each pair within the 2d array has to be evaluated from both sides (left to right) (right to left). So to understand which player has the winning value, the player 1 value needs to be compared to player 2, then player 1 value needs to be compared to player 2. Only one combination will exist and this is were the power of if statements can be used to find the winner as expressed below.
+To determine which player has the winning value, each pair within the 2d array has to be evaluated from both sides (left to right) (right to left). To understand which player has the winning value, the player 1 value needs to be compared to player 2, then player 1 value needs to be compared to player 2. Only one combination will exist and this is were the power of if statements can be used to find the winner as expressed below.
 
 ```javascript
 function checkAnswers(answer1, answer2){
-  if (player1Input === player2Input){
+  if (answer1 === answer2){
     console.log("It's a Draw!");
   } else {
     for (var i = 0; i < winningCombinations.length; i++){
