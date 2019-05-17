@@ -1,5 +1,5 @@
-![](./images/arnold-clark-logo.png)
 # Hackday Challenge
+![](./images/arnold-clark-logo.png)
 
 # Trek Game
 ![](./images/bbt.jpg)

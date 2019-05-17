@@ -5,43 +5,61 @@ var winningCombinations = [[0,1], [0,3], [1,2], [1,4], [2,3], [2,0], [3,4], [3,1
 var gameValuesIcons = ["fa-hand-scissors", "fa-hand-paper", "fa-hand-rock","fa-hand-lizard","fa-hand-spock"];
 
 // Player 1 Variables
-var player1Input = getIndexValue(gameValues[Math.floor(Math.random() * gameValues.length)]);
 var player1Status = document.getElementsByClassName("player1")[0];
 var player1Answer = document.getElementsByClassName("player1-answer")[0];
 
-// function fetchPlayer1Answer() {
-//   var rock = document.getElementById("rock").value;
-//   var paper = document.getElementById("paper").value;
-//   var scissors = document.getElementById("scissors").value;
-//   var lizard = document.getElementById("lizard").value;
-//   var spock = document.getElementById("spock").value;
-//   if(rock === ""){
-//     console.log(rock);
-//     return rock;
-//     rock = "";
-//   } if(paper === ""){
-//     console.log(rock);
-//     return paper;
-//     paper = "";
-//   } if(scissors === ""){
-//     console.log(scissors);
-//     return scissors;
-//     scissors= "";
-//   } if(lizard === ""){
-//     console.log(lizard);
-//     return lizard;
-//     lizard = "";
-//   }if(spock === ""){
-//     console.log(spock);
-//     return spock;
-//     spock = "";
-//   }
-// }
 
 // Player 2 Variables
-var player2Input = getIndexValue(gameValues[Math.floor(Math.random() * gameValues.length)]);
 var player2Status = document.getElementsByClassName("player2")[0];
 var player2Answer = document.getElementsByClassName("player2-answer")[0];
+
+// Event Listener for buttons
+scissorsBtn = document.getElementById("scissors").addEventListener("click", function(){
+  clearPlayersStatus();
+  checkAnswers(getIndexValue(this.value), getIndexValue(gameValues[Math.floor(Math.random() * gameValues.length)]));
+});
+
+paperBtn = spockBtn = document.getElementById("paper").addEventListener("click", function(){
+  clearPlayersStatus();
+  checkAnswers(getIndexValue(this.value), getIndexValue(gameValues[Math.floor(Math.random() * gameValues.length)]));
+});
+
+rockBtn = document.getElementById("rock").addEventListener("click", function(){
+  clearPlayersStatus();
+  checkAnswers(getIndexValue(this.value), getIndexValue(gameValues[Math.floor(Math.random() * gameValues.length)]));
+});
+
+lizardBtn = document.getElementById("lizard").addEventListener("click", function(){
+  clearPlayersStatus();
+  checkAnswers(getIndexValue(this.value), getIndexValue(gameValues[Math.floor(Math.random() * gameValues.length)]));
+});
+
+spockBtn = document.getElementById("spock").addEventListener("click", function(){
+  clearPlayersStatus();
+  checkAnswers(getIndexValue(this.value), getIndexValue(gameValues[Math.floor(Math.random() * gameValues.length)]));
+});
+
+
+function clearPlayersStatus(answer1, answer2){
+  // Player 1 Styles
+  player1Status.classList.remove("loser");
+  player1Status.classList.remove("winner");
+  player1Status.innerHTML = "";
+  player1Answer.innerHTML = ""
+  player1Answer.classList.remove(gameValues[answer1]);
+
+  // Player 2 Styles
+  player2Status.classList.remove("loser");
+  player2Status.classList.remove("winner");
+  player2Status.innerHTML = "";
+  player2Answer.innerHTML = ""
+  player2Answer.classList.remove(gameValues[answer2]);
+
+  // Draw Style
+  player1Status.classList.remove("draw");
+  player2Status.classList.remove("draw");
+}
+
 
 function getIndexValue(answer) {
   // Check to make sure answer is in array.
@@ -53,7 +71,7 @@ function getIndexValue(answer) {
 }
 
 function checkAnswers(answer1, answer2){
-  if (player1Input === player2Input){
+  if (answer1 === answer2){
     // Player 1
     player1Status.classList.add("draw");
     player1Status.innerHTML = "Draw!";
@@ -105,10 +123,9 @@ function checkAnswers(answer1, answer2){
               // Debugging
               console.log("[Player 2] used [" + gameValues[answer2] + "] and [Player 1] used [" + gameValues[answer1] + "]");
               break;
-            }//end of else if
-          }//end of if
-        }//end of inner for loop
-    }// end of outer for loop
-  }// end of else
-}// end checkAnswers()
-checkAnswers(player1Input,player2Input);
+            }
+          }
+        }
+    }
+  }
+}
