@@ -5,17 +5,17 @@
 ![](./images/bbt.jpg)
 
 ## Technologies Used
-  To build the game logic JavaScript was used along Bootstrap and  some custom CSS to create a web interface.
+  To build the game logic JavaScript was used along with Bootstrap and some custom CSS to create a web interface.
   - Bootstrap (v4)
   - AwesomeFonts (For Icons)
 
 ## Game Design
-As the Trek game requires the follow values; scissors, paper, rock, lizard and spock. These were put in to an array as shown bellow.
+The Trek game requires the following values; scissors, paper, rock, lizard and spock. These were put in to an array as shown bellow.
 ```javascript
 var gameValues = [“scissors”, ”paper”, ”rock”, ”lizard”, “spock”];
 ```
 ### Winning Combinations
-Then to understand which player would win, winning combinations need to be created. For simplicity, winning combinations were created using the index number for each value within the gameValues array.
+To understand which player would win, winning combinations need to be created. For simplicity, winning combinations were created using the index number for each value within the gameValues array.
 - Scissors Wins = [0] [1]
 - Paper Wins = [1] [2]
 - Rock Wins = [2] [3]
@@ -43,7 +43,7 @@ var winningCombinations = [[0,1], [0,3], [1,2], [1,4], [2,3], [2,0], [3,4], [3,1
 ```
 
 ### Check Combinations
-To determine which player has the winning value, each pair within the 2d array had to be evaluated from both sides (left to right) (right to left). So to understand which player had the winning value, the player 1 value needs to be compare player 2, then player value need to be compared to player 2. Only one combination will exist and this were the power of if statements can be used to find the winner as expressed bellow.
+To determine which player has the winning value, each pair within the 2d array has to be evaluated from both sides (left to right) (right to left). So to understand which player has the winning value, the player 1 value needs to be compared to player 2, then player 1 value needs to be compared to player 2. Only one combination will exist and this is were the power of if statements can be used to find the winner as expressed below.
 
 ```javascript
 function checkAnswers(answer1, answer2){
@@ -70,7 +70,7 @@ function checkAnswers(answer1, answer2){
 }
 ```
 # Web Interface
-Additonal code was written to the checkAnswers function, to make the game interactive. This can all be view within [main.js](https://github.com/ConnorUnwin/DPD-Hack-Day-2019/blob/master/js/main.js)
+Additonal code was written to the checkAnswers function, to make the game interactive. This can all be viewed within [main.js](https://github.com/ConnorUnwin/DPD-Hack-Day-2019/blob/master/js/main.js)
 ![](./images/Web-Based-Interface.png)
 
 # Winning
@@ -80,8 +80,3 @@ The web-interface when the user wins.
 # Draw
 The web-interface when there is a draw.
 ![](./images/Draw.png)
-
-
-# Demo
-<a href="./video/Demo.mp4" target="_blank"><img src="images/Web-based-game-interface.png"
-alt="IMAGE ALT TEXT HERE" width="500" height="500" border="10" /></a>
