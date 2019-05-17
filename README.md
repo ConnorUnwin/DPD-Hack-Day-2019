@@ -2,7 +2,7 @@
 # Hackday Challenge
 
 # Trek Game
-![](./images/Star-Trek.jpg)
+![](./images/bbt.jpg)
 
 ## Technologies Used
   To build the game logic JavaScript was used along Bootstrap and  some custom CSS to create a web interface.
